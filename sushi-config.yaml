@@ -1,0 +1,70 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: uv.esavi
+canonical: https://paho.org/fhir/esavi
+name: ESAVI
+status: draft
+version: 0.1.45
+fhirVersion: 4.0.1
+title: Guía de Implementación FHIR de ESAVI
+copyrightYear: 2021+
+releaseLabel: ci-build
+#language: es-AR
+
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
+publisher:
+  name: ESAVI -
+  url: https://covid-19pharmacovigilance.paho.org/resources/updates-on-aefi
+  email: rizzatodan@paho.org
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+pages:
+  index.md:
+    title: Inicio
+  objetivos.md:
+    title: Objetivos
+  alcance.md:
+    title: Alcance
+  uso.md:
+    title: Como llenar la Guía
+  actores_CasosUso.md:
+    title: Actores y Casos de Uso
+  artifacts.html:
+    title: Artefactos
+  mapeos.md:
+    title:  Mapeos
+  terminologias.md:
+    title: Terminologias
+  descargas.md:
+    title: Descargas
+  generalidades.md:
+    title: Generalidades
+  consideraciones.md:
+    title: Consideraciones
+  operaciones.md:
+    title: Operaciones
+  seguridad.md:
+    title: Seguridad
+
+menu:
+  Inicio: index.html
+  Objetivos: objetivos.html
+  Alcance: alcance.html
+  Uso: uso.html
+  Actores y Casos de Uso: actores_CasosUso.html
+  Artefactos: artifacts.html
+  Mapeos: mapeos.html
+  #  Seguridad: seguridad.html
+  Terminologias: terminologias.html
+  Descargas: descargas.html
+  Generalidades: generalidades.html
+  Consideraciones: consideraciones.html
+  #Datos Generales:
+  #  Generalidades: generalidades.html
+  #  Actores y Casos de Uso: actores_CasosUso.html
+  #  Operaciones FHIR: operaciones.html

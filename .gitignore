@@ -1,0 +1,13 @@
+input-cache/
+temp/
+template/
+fsh-generated/
+output/
+node_modules/
+.DS_Store
+xxxx/
+src/
+input-out/
+local-template/
+input/.DS_Store
+input/fsh/.DS_Store
