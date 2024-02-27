@@ -1,0 +1,5 @@
+== Suppressed Messages ==
+
+# MedDra no es soportado como codesystem por HL7 FHIR
+%Resolved system https://www.meddra.org (v3.0.0), but the definition doesn't include any codes, so the code has not been validated
+%Unable to provide support for code system https://www.meddra.org

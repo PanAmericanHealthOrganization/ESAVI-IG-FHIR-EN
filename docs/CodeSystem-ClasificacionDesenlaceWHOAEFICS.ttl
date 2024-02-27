@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://paho.org/fhir/esavi/CodeSystem/ClasificacionDesenlaceWHOAEFICS> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ClasificacionDesenlaceWHOAEFICS"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-insensitive code system <code>https://paho.org/fhir/esavi/CodeSystem/ClasificacionDesenlaceWHOAEFICS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">A1<a name=\"ClasificacionDesenlaceWHOAEFICS-A1\"> </a></td><td>Event related to the vaccine or any of its components</td></tr><tr><td style=\"white-space:nowrap\">A2<a name=\"ClasificacionDesenlaceWHOAEFICS-A2\"> </a></td><td>Event related to a quality deviation of the biological product or vaccine</td></tr><tr><td style=\"white-space:nowrap\">A3<a name=\"ClasificacionDesenlaceWHOAEFICS-A3\"> </a></td><td>Event related to a programmatic error</td></tr><tr><td style=\"white-space:nowrap\">A4<a name=\"ClasificacionDesenlaceWHOAEFICS-A4\"> </a></td><td>Stress event that occurred immediately before, during or immediately after the vaccination process</td></tr><tr><td style=\"white-space:nowrap\">B1<a name=\"ClasificacionDesenlaceWHOAEFICS-B1\"> </a></td><td>The temporal relationship is consistent, but there is insufficient definitive evidence of a causal relationship with the vaccine (it may be an event recently associated with the vaccine [signal])</td></tr><tr><td style=\"white-space:nowrap\">B2<a name=\"ClasificacionDesenlaceWHOAEFICS-B2\"> </a></td><td>Determining factors for classification show conflicting trends for and against a causal association with vaccination</td></tr><tr><td style=\"white-space:nowrap\">C<a name=\"ClasificacionDesenlaceWHOAEFICS-C\"> </a></td><td>Coincidental Cause</td></tr><tr><td style=\"white-space:nowrap\">NC<a name=\"ClasificacionDesenlaceWHOAEFICS-NC\"> </a></td><td>Not classifiable</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://paho.org/fhir/esavi/CodeSystem/ClasificacionDesenlaceWHOAEFICS"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.45"] ; # 
+  fhir:name [ fhir:v "ClasificacionDesenlaceWHOAEFICS"] ; # 
+  fhir:title [ fhir:v "WHO-AEFI causality classification"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2021-03-11T00:00:00-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ESAVI -"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ESAVI -" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://covid-19pharmacovigilance.paho.org/resources/updates-on-aefi" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "rizzatodan@paho.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "WHO-AEFI causality classification method"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "8"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "A1" ] ;
+     fhir:display [ fhir:v "Event related to the vaccine or any of its components" ]
+  ] [
+     fhir:code [ fhir:v "A2" ] ;
+     fhir:display [ fhir:v "Event related to a quality deviation of the biological product or vaccine" ]
+  ] [
+     fhir:code [ fhir:v "A3" ] ;
+     fhir:display [ fhir:v "Event related to a programmatic error" ]
+  ] [
+     fhir:code [ fhir:v "A4" ] ;
+     fhir:display [ fhir:v "Stress event that occurred immediately before, during or immediately after the vaccination process" ]
+  ] [
+     fhir:code [ fhir:v "B1" ] ;
+     fhir:display [ fhir:v "The temporal relationship is consistent, but there is insufficient definitive evidence of a causal relationship with the vaccine (it may be an event recently associated with the vaccine [signal])" ]
+  ] [
+     fhir:code [ fhir:v "B2" ] ;
+     fhir:display [ fhir:v "Determining factors for classification show conflicting trends for and against a causal association with vaccination" ]
+  ] [
+     fhir:code [ fhir:v "C" ] ;
+     fhir:display [ fhir:v "Coincidental Cause" ]
+  ] [
+     fhir:code [ fhir:v "NC" ] ;
+     fhir:display [ fhir:v "Not classifiable" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,57 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ModoConfirmacionInfeccionCS",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-insensitive code system <code>https://paho.org/fhir/esavi/CodeSystem/ModoConfirmacionInfeccionCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"ModoConfirmacionInfeccionCS-1\"> </a></td><td>By clinical epidemiological criteria</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"ModoConfirmacionInfeccionCS-2\"> </a></td><td>by immunoassay</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"ModoConfirmacionInfeccionCS-3\"> </a></td><td>By molecular tests</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"ModoConfirmacionInfeccionCS-4\"> </a></td><td>Due to viral isolation</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"ModoConfirmacionInfeccionCS-5\"> </a></td><td>Other</td></tr></table></div>"
+  },
+  "url" : "https://paho.org/fhir/esavi/CodeSystem/ModoConfirmacionInfeccionCS",
+  "version" : "0.1.45",
+  "name" : "ModoConfirmacionInfeccionCS",
+  "title" : "Infection Confirmation Mode",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2021-03-11T00:00:00-03:00",
+  "publisher" : "ESAVI -",
+  "contact" : [{
+    "name" : "ESAVI -",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://covid-19pharmacovigilance.paho.org/resources/updates-on-aefi"
+    },
+    {
+      "system" : "email",
+      "value" : "rizzatodan@paho.org"
+    }]
+  }],
+  "description" : "Modes of Confirmation of COVID-19 Infection",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "caseSensitive" : false,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "1",
+    "display" : "By clinical epidemiological criteria"
+  },
+  {
+    "code" : "2",
+    "display" : "by immunoassay"
+  },
+  {
+    "code" : "3",
+    "display" : "By molecular tests"
+  },
+  {
+    "code" : "4",
+    "display" : "Due to viral isolation"
+  },
+  {
+    "code" : "5",
+    "display" : "Other"
+  }]
+}

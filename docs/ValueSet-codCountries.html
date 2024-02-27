@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Country Codes - Guía de Implementación FHIR de ESAVI v0.1.45</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"6.3"}
+    h3,h4,h5,h6{--heading-prefix:"6.3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de ESAVI</span>
+            <br/>
+            <span style="display:inline-block;">0.1.45 - ci-build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Inicio</a>
+  </li>
+  <li>
+    <a href="objetivos.html">Objetivos</a>
+  </li>
+  <li>
+    <a href="alcance.html">Alcance</a>
+  </li>
+  <li>
+    <a href="uso.html">Uso</a>
+  </li>
+  <li>
+    <a href="actores_CasosUso.html">Actores y Casos de Uso</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefactos</a>
+  </li>
+  <li>
+    <a href="mapeos.html">Mapeos</a>
+  </li>
+  <li>
+    <a href="terminologias.html">Terminologias</a>
+  </li>
+  <li>
+    <a href="descargas.html">Descargas</a>
+  </li>
+  <li>
+    <a href="generalidades.html">Generalidades</a>
+  </li>
+  <li>
+    <a href="consideraciones.html">Consideraciones</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artefactos</b></a></li><li><b>Country Codes</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de ESAVI - Local Development build (v0.1.45) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://paho.org/fhir/esavi/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-codCountries.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-codCountries.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-codCountries.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: Country Codes
+
+  </h2>
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://paho.org/fhir/esavi/ValueSet/codCountries<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://paho.org/fhir/esavi/ValueSet/codCountries"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.45<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://paho.org/fhir/esavi/ValueSet/codCountries|0.1.45"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2021-03-11
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">CodPaises</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>Codes defined for the identification of countries according to ISO3166-N standard</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<p>This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</p>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-codCountriesCS.html"><code>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</code></a></li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-codCountriesCS.html">codesystem Country Codes v0.1.45 (CodeSystem)</a></p><p>This value set contains 249 concepts.</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ABW"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ABW">ABW</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Aruba</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-AFG"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-AFG">AFG</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Afghanistan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-AGO"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-AGO">AGO</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Angola</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-AIA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-AIA">AIA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Anguilla</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ALA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ALA">ALA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Eland Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ALB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ALB">ALB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Albania</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-AND"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-AND">AND</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Andorra</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ARE"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ARE">ARE</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>United Arab Emirates</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ARG"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ARG">ARG</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Argentina</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ARM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ARM">ARM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Armenia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ASM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ASM">ASM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>American Samoa</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ATA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ATA">ATA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Antarctica</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ATF"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ATF">ATF</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>French Southern Territories</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ATG"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ATG">ATG</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Antigua and Barbuda</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-AUS"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-AUS">AUS</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Australia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-AUT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-AUT">AUT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Austria</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-AZE"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-AZE">AZE</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Azerbaijan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BDI"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BDI">BDI</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Burundi</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BEL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BEL">BEL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Belgium</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BEN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BEN">BEN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Benin</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BES"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BES">BES</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Bonaire, Sint Eustatius and Saba</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BFA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BFA">BFA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Burkina Faso</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BGD"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BGD">BGD</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Bangladesh</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BGR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BGR">BGR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Bulgaria</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BHR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BHR">BHR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Bahrain</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BHS"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BHS">BHS</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Bahamas</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BIH"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BIH">BIH</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Bosnia and Herzegovina</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BLM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BLM">BLM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Saint Barthilemy</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BLR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BLR">BLR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Belarus</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BLZ"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BLZ">BLZ</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Belize</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BMU"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BMU">BMU</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Bermuda</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BOL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BOL">BOL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Bolivia, Plurinational State of</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BRA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BRA">BRA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Brazil</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BRB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BRB">BRB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Barbados</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BRN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BRN">BRN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Brunei Darussalam</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BTN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BTN">BTN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Bhutan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BVT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BVT">BVT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Bouvet Island</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-BWA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-BWA">BWA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Botswana</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CAF"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CAF">CAF</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Central African Republic</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CAN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CAN">CAN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Canada</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CCK"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CCK">CCK</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Cocos (Keeling) Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CHE"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CHE">CHE</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Switzerland</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CHL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CHL">CHL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Chile</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CHN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CHN">CHN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>China</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CIV"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CIV">CIV</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Ctte d'Ivoire</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CMR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CMR">CMR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Cameroon</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-COD"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-COD">COD</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Congo, the Democratic Republic of the</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-COG"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-COG">COG</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Congo</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-COK"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-COK">COK</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Cook Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-COL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-COL">COL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Colombia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-COM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-COM">COM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Comoros</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CPV"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CPV">CPV</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Cabo Verde</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CRI"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CRI">CRI</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Costa Rica</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CUB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CUB">CUB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Cuba</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CUW"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CUW">CUW</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Curagao</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CXR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CXR">CXR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Christmas Island</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CYM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CYM">CYM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Cayman Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CYP"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CYP">CYP</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Cyprus</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-CZE"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-CZE">CZE</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Czechia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-DEU"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-DEU">DEU</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Germany</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-DJI"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-DJI">DJI</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Djibouti</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-DMA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-DMA">DMA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Dominica</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-DNK"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-DNK">DNK</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Denmark</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-DOM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-DOM">DOM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Dominican Republic</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-DZA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-DZA">DZA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Algeria</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ECU"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ECU">ECU</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Ecuador</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-EGY"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-EGY">EGY</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Egypt</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ERI"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ERI">ERI</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Eritrea</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ESH"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ESH">ESH</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Western Sahara</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ESP"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ESP">ESP</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Spain</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-EST"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-EST">EST</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Estonia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ETH"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ETH">ETH</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Ethiopia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-FIN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-FIN">FIN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Finland</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-FJI"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-FJI">FJI</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Fiji</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-FLK"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-FLK">FLK</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Falkland Islands (Malvinas)</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-FRA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-FRA">FRA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>France</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-FRO"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-FRO">FRO</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Faroe Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-FSM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-FSM">FSM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Micronesia, Federated States of</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GAB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GAB">GAB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Gabon</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GBR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GBR">GBR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>United Kingdom</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GEO"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GEO">GEO</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Georgia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GGY"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GGY">GGY</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Guernsey</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GHA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GHA">GHA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Ghana</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GIB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GIB">GIB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Gibraltar</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GIN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GIN">GIN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Guinea</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GLP"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GLP">GLP</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Guadeloupe</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GMB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GMB">GMB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Gambia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GNB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GNB">GNB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Guinea-Bissau</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GNQ"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GNQ">GNQ</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Equatorial Guinea</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GRC"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GRC">GRC</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Greece</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GRD"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GRD">GRD</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Grenada</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GRL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GRL">GRL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Greenland</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GTM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GTM">GTM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Guatemala</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GUF"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GUF">GUF</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>French Guiana</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GUM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GUM">GUM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Guam</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-GUY"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-GUY">GUY</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Guyana</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-HKG"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-HKG">HKG</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Hong Kong</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-HMD"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-HMD">HMD</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Heard Island and McDonald Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-HND"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-HND">HND</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Honduras</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-HRV"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-HRV">HRV</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Croatia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-HTI"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-HTI">HTI</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Haiti</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-HUN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-HUN">HUN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Hungary</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-IDN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-IDN">IDN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Indonesia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-IMN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-IMN">IMN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Isle of Man</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-IND"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-IND">IND</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>India</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-IOT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-IOT">IOT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>British Indian Ocean Territory</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-IRL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-IRL">IRL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Ireland</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-IRN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-IRN">IRN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Iran, Islamic Republic of</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-IRQ"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-IRQ">IRQ</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Iraq</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ISL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ISL">ISL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Iceland</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ISR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ISR">ISR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Israel</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ITA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ITA">ITA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Italy</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-JAM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-JAM">JAM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Jamaica</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-JEY"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-JEY">JEY</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Jersey</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-JOR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-JOR">JOR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Jordan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-JPN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-JPN">JPN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Japan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-KAZ"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-KAZ">KAZ</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Kazakhstan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-KEN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-KEN">KEN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Kenya</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-KGZ"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-KGZ">KGZ</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Kyrgyzstan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-KHM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-KHM">KHM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Cambodia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-KIR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-KIR">KIR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Kiribati</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-KNA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-KNA">KNA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Saint Kitts and Nevis</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-KOR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-KOR">KOR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Korea, Republic of</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-KWT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-KWT">KWT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Kuwait</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-LAO"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-LAO">LAO</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Lao People's Democratic Republic</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-LBN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-LBN">LBN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Lebanon</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-LBR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-LBR">LBR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Liberia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-LBY"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-LBY">LBY</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Libya</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-LCA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-LCA">LCA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Saint Lucia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-LIE"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-LIE">LIE</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Liechtenstein</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-LKA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-LKA">LKA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Sri Lanka</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-LSO"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-LSO">LSO</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Lesotho</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-LTU"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-LTU">LTU</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Lithuania</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-LUX"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-LUX">LUX</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Luxembourg</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-LVA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-LVA">LVA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Latvia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MAC"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MAC">MAC</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Macao</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MAF"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MAF">MAF</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Saint Martin (French part)</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MAR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MAR">MAR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Morocco</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MCO"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MCO">MCO</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Monaco</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MDA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MDA">MDA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Moldova, Republic of</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MDG"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MDG">MDG</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Madagascar</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MDV"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MDV">MDV</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Maldives</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MEX"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MEX">MEX</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Mexico</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MHL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MHL">MHL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Marshall Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MKD"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MKD">MKD</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Macedonia, the former Yugoslav Republic of</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MLI"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MLI">MLI</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Mali</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MLT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MLT">MLT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Malta</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MMR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MMR">MMR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Myanmar</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MNE"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MNE">MNE</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Montenegro</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MNG"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MNG">MNG</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Mongolia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MNP"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MNP">MNP</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Northern Mariana Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MOZ"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MOZ">MOZ</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Mozambique</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MRT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MRT">MRT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Mauritania</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MSR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MSR">MSR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Montserrat</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MTQ"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MTQ">MTQ</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Martinique</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MUS"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MUS">MUS</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Mauritius</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MWI"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MWI">MWI</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Malawi</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MYS"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MYS">MYS</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Malaysia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-MYT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-MYT">MYT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Mayotte</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NAM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NAM">NAM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Namibia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NCL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NCL">NCL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>New Caledonia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NER"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NER">NER</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Niger</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NFK"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NFK">NFK</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Norfolk Island</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NGA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NGA">NGA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Nigeria</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NIC"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NIC">NIC</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Nicaragua</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NIU"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NIU">NIU</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Niue</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NLD"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NLD">NLD</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Netherlands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NOR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NOR">NOR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Norway</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NPL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NPL">NPL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Nepal</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NRU"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NRU">NRU</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Nauru</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-NZL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-NZL">NZL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>New Zealand</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-OMN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-OMN">OMN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Oman</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PAK"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PAK">PAK</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Pakistan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PAN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PAN">PAN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Panama</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PCN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PCN">PCN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Pitcairn</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PER"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PER">PER</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Peru</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PHL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PHL">PHL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Philippines</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PLW"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PLW">PLW</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Palau</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PNG"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PNG">PNG</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Papua New Guinea</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-POL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-POL">POL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Poland</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PRI"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PRI">PRI</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Puerto Rico</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PRK"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PRK">PRK</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Korea, Democratic People's Republic of</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PRT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PRT">PRT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Portugal</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PRY"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PRY">PRY</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Paraguay</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PSE"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PSE">PSE</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Palestine, State of</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-PYF"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-PYF">PYF</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>French Polynesia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-QAT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-QAT">QAT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Qatar</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-REU"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-REU">REU</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Riunion</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ROU"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ROU">ROU</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Romania</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-RUS"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-RUS">RUS</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Russian Federation</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-RWA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-RWA">RWA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Rwanda</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SAU"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SAU">SAU</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Saudi Arabia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SDN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SDN">SDN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Sudan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SEN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SEN">SEN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Senegal</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SGP"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SGP">SGP</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Singapore</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SGS"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SGS">SGS</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>South Georgia and the South Sandwich Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SHN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SHN">SHN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Saint Helena, Ascension and Tristan da Cunha</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SJM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SJM">SJM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Svalbard and Jan Mayen</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SLB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SLB">SLB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Solomon Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SLE"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SLE">SLE</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Sierra Leone</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SLV"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SLV">SLV</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>El Salvador</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SMR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SMR">SMR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>San Marino</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SOM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SOM">SOM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Somalia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SPM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SPM">SPM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Saint Pierre and Miquelon</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SRB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SRB">SRB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Serbia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SSD"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SSD">SSD</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>South Sudan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-STP"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-STP">STP</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Sao Tome and Principe</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SUR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SUR">SUR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Suriname</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SVK"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SVK">SVK</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Slovakia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SVN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SVN">SVN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Slovenia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SWE"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SWE">SWE</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Sweden</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SWZ"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SWZ">SWZ</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Swaziland</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SXM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SXM">SXM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Sint Maarten (Dutch part)</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SYC"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SYC">SYC</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Seychelles</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-SYR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-SYR">SYR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Syrian Arab Republic</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TCA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TCA">TCA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Turks and Caicos Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TCD"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TCD">TCD</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Chad</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TGO"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TGO">TGO</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Togo</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-THA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-THA">THA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Thailand</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TJK"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TJK">TJK</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Tajikistan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TKL"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TKL">TKL</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Tokelau</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TKM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TKM">TKM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Turkmenistan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TLS"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TLS">TLS</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Timor-Leste</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TON"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TON">TON</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Tonga</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TTO"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TTO">TTO</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Trinidad and Tobago</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TUN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TUN">TUN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Tunisia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TUR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TUR">TUR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Turkey</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TUV"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TUV">TUV</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Tuvalu</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TWN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TWN">TWN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Taiwan, Province of China</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-TZA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-TZA">TZA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Tanzania, United Republic of</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-UGA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-UGA">UGA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Uganda</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-UKR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-UKR">UKR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Ukraine</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-UMI"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-UMI">UMI</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>United States Minor Outlying Islands</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-URY"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-URY">URY</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Uruguay</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-USA"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-USA">USA</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>United States of America</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-UZB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-UZB">UZB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Uzbekistan</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-VAT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-VAT">VAT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Holy See</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-VCT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-VCT">VCT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Saint Vincent and the Grenadines</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-VEN"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-VEN">VEN</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Venezuela, Bolivarian Republic of</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-VGB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-VGB">VGB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Virgin Islands, British</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-VIR"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-VIR">VIR</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Virgin Islands, U.S.</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-VNM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-VNM">VNM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Viet Nam</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-VUT"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-VUT">VUT</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Vanuatu</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-WLF"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-WLF">WLF</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Wallis and Futuna</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-WSM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-WSM">WSM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Samoa</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-YEM"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-YEM">YEM</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Yemen</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ZAF"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ZAF">ZAF</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>South Africa</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ZMB"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ZMB">ZMB</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Zambia</td></tr><tr><td style="white-space:nowrap"><a name="https---paho.org-fhir-esavi-CodeSystem-codCountriesCS-ZWE"> </a>  <a href="CodeSystem-codCountriesCS.html#codCountriesCS-ZWE">ZWE</a></td><td>https://paho.org/fhir/esavi/CodeSystem/codCountriesCS</td><td>Zimbabwe</td></tr></table></div>
+
+  <hr/>
+  <p>
+    Explanation of the columns that may appear on this page:
+  </p>
+  <table class="grid">
+    <tr>
+      <td>Level</td>
+      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
+          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>The code (used as the code in the resource instance)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>An explanation of the meaning of the concept</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Additional notes about how to use the code</td>
+    </tr>
+  </table>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://covid-19pharmacovigilance.paho.org/resources/updates-on-aefi">ESAVI -</a>.  Package uv.esavi#0.1.45 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 27, 2024 14:38-0300">2024-02-27</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/PanAmericanHealthOrganization/OPS-ESAVI">Issues</a>
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+  
+    
+    <script type="text/javascript">
+     /* <![CDATA[ */
+        $(':header[id]').each(function() { // apply this to each heading
+          var id = $(this).attr('id');
+          var feedbackurl = 'https://docs.google.com/forms/d/e/1FAIpQLSdlp9-wCnxYL3Sf823WdFWg7IX9r7ycJxUO8ys66fJrq2uEPw/viewform?usp=pp_url'; // the feedbackEntry (in the YAML) file will have a URL, which will be a google forms URL. This URL can be clicked, so the security risks are the same as an IG Editor entering any other URL.
+          var feedbacklabel = 'Feedback';
+          
+            
+              feedbacklabel = 'Comentarios IG';  // The feedback label is a string
+            
+
+            
+              var parameterFieldId = '';
+              var parameterVariableName = '';
+              var parameterValue = '';
+              parameterFieldId = 'entry.'+parseInt(1894621411).toString(); // the parameter fields is parsed as an integer, i presume this means no code can be injected there.
+              parameterVariableName = 'pageTitle';
+
+              switch (parameterVariableName) { // the variableName only has 3 possible values. Everything else will default to "not supported"
+                default:
+                    console.log("Parameter value not supported");
+                    break;
+                  case "pageTitle":
+                    parameterValue = encodeURIComponent($(document).attr('title'));
+                    break;
+                  case "sectionId":
+                    parameterValue = id;
+                    break;
+                  case "sectionName":
+                    parameterValue = document.getElementById(id).textContent;
+                    break;
+              }
+/* <![CDATA[ */
+              feedbackurl = feedbackurl + '&';
+              feedbackurl = feedbackurl + parameterFieldId + '=' + parameterValue;
+/* ]]> */
+            
+              var parameterFieldId = '';
+              var parameterVariableName = '';
+              var parameterValue = '';
+              parameterFieldId = 'entry.'+parseInt(823462654).toString(); // the parameter fields is parsed as an integer, i presume this means no code can be injected there.
+              parameterVariableName = 'sectionName';
+
+              switch (parameterVariableName) { // the variableName only has 3 possible values. Everything else will default to "not supported"
+                default:
+                    console.log("Parameter value not supported");
+                    break;
+                  case "pageTitle":
+                    parameterValue = encodeURIComponent($(document).attr('title'));
+                    break;
+                  case "sectionId":
+                    parameterValue = id;
+                    break;
+                  case "sectionName":
+                    parameterValue = document.getElementById(id).textContent;
+                    break;
+              }
+/* <![CDATA[ */
+              feedbackurl = feedbackurl + '&';
+              feedbackurl = feedbackurl + parameterFieldId + '=' + parameterValue;
+/* ]]> */
+            
+            
+          if (id) { //To make sure the element has an id
+            $(this).append(function () {
+              return $('<a/>', {
+                id,
+                href: feedbackurl,
+                text: feedbacklabel+' ' ,
+                class: 'feedback',
+                target: '_blank',
+                onclick: 'window.open('+feedbackurl+',\'newwindow\',\'width=300,height=250\');return false;'
+        
+              });
+            });
+          }
+        }) 
+/* ]]> */
+      </script>  
+    
+  
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

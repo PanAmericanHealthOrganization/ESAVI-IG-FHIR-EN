@@ -1,0 +1,116 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/ClasificacionDesenlaceCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "ClasificacionDesenlaceCS",
+      "title" : "Outcomes After ESAVI",
+      "description" : "Classification of Outcome After Suffering ESAVI"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/ClasificacionDesenlaceNaranjoCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "ClasificacionDesenlaceNaranjoCS",
+      "title" : "Naranjo Causality Classification",
+      "description" : "Naranjo causality classification method"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/ClasificacionDesenlaceWHOAEFICS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "ClasificacionDesenlaceWHOAEFICS",
+      "title" : "WHO-AEFI causality classification",
+      "description" : "WHO-AEFI causality classification method"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/ClasificacionDesenlaceWHOUMCCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "ClasificacionDesenlaceWHOUMCCS",
+      "title" : "WHO-UMC Causality Classification",
+      "description" : "WHO-UMC causality classification method"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/CodeWhoManufacturerCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "CodigoWhoFabricanteCS",
+      "title" : "Vaccine Manufacturer",
+      "description" : "WHO Vaccine Manufacturer Codes"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/ComplicacionEmbarazoCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "ComplicacionEmbarazoCS",
+      "title" : "Pregnancy Complications",
+      "description" : "Codes for Pregnancy Complications"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/DirOrgNotiCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "DirOrgNotiCS",
+      "title" : "PAHO Codes for Addresses",
+      "description" : "Address Codes according to PAHO"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/ModoConfirmacionInfeccionCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "ModoConfirmacionInfeccionCS",
+      "title" : "Infection Confirmation Mode",
+      "description" : "Modes of Confirmation of COVID-19 Infection"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/ModoVerificacionVacunaCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "ModoVerificacionVacunaCS",
+      "title" : "Prior Vaccination Verification Mode",
+      "description" : "Vaccine Verification Modes or Completed Vaccination Schedule"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/ProfesionalNotificadorCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "ProfesionalNotificadorCS",
+      "title" : "Type of Notifying Professional",
+      "description" : "ESAVI Notifier Type Codes for PAHO"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/RespuestaSiNoNoSabeCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "RespuestaSiNoNoSabeCS",
+      "title" : "Simple Answers",
+      "description" : "Codes to capture simple yes/no/don't know responses"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/SistemaClasfCausalidadCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "SistemaClasfCausalidadCS",
+      "title" : "Type of Causality Classification Method",
+      "description" : "Codes for Types of Causality Classification Methods"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/SistemasDeCodificacionCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "SistemasDeCodificacionCS",
+      "title" : "Coding Systems",
+      "description" : "Coding Systems for Code Determination"
+    },
+    {
+      "url" : "https://paho.org/fhir/esavi/CodeSystem/codCountriesCS",
+      "version" : "0.1.45",
+      "status" : "active",
+      "name" : "CodPaisesCS",
+      "title" : "Country Codes",
+      "description" : "Codes defined for the identification of countries according to ISO3166-3 standard"
+    }
+  ]
+}

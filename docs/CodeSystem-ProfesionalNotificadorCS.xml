@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="ProfesionalNotificadorCS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-insensitive code system <code>https://paho.org/fhir/esavi/CodeSystem/ProfesionalNotificadorCS</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1<a name="ProfesionalNotificadorCS-1"> </a></td><td>Doctor</td></tr><tr><td style="white-space:nowrap">2<a name="ProfesionalNotificadorCS-2"> </a></td><td>Pharmacist</td></tr><tr><td style="white-space:nowrap">3<a name="ProfesionalNotificadorCS-3"> </a></td><td>Other Profession related to Health</td></tr><tr><td style="white-space:nowrap">4<a name="ProfesionalNotificadorCS-4"> </a></td><td>Lawyer</td></tr><tr><td style="white-space:nowrap">5<a name="ProfesionalNotificadorCS-5"> </a></td><td>User or other non-health professional</td></tr><tr><td style="white-space:nowrap">6<a name="ProfesionalNotificadorCS-6"> </a></td><td>Not user defined</td></tr></table></div>
+  </text>
+  <url value="https://paho.org/fhir/esavi/CodeSystem/ProfesionalNotificadorCS"/>
+  <version value="0.1.45"/>
+  <name value="ProfesionalNotificadorCS"/>
+  <title value="Type of Notifying Professional"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2022-02-02"/>
+  <publisher value="ESAVI -"/>
+  <contact>
+    <name value="ESAVI -"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://covid-19pharmacovigilance.paho.org/resources/updates-on-aefi"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="rizzatodan@paho.org"/>
+    </telecom>
+  </contact>
+  <description value="ESAVI Notifier Type Codes for PAHO"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="1"/>
+    <display value="Doctor"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Pharmacist"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Other Profession related to Health"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="Lawyer"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="User or other non-health professional"/>
+  </concept>
+  <concept>
+    <code value="6"/>
+    <display value="Not user defined"/>
+  </concept>
+</CodeSystem>
