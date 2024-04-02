@@ -8,7 +8,7 @@ name: ESAVI
 status: draft
 version: 0.1.45
 fhirVersion: 4.0.1
-title: Guía de Implementación FHIR de ESAVI
+title: ESAVI FHIR Implementation Guide (IG)
 copyrightYear: 2021+
 releaseLabel: ci-build
 #language: es-AR
@@ -25,45 +25,48 @@ publisher:
 
 pages:
   index.md:
-    title: Inicio
+    title: Home
   objetivos.md:
-    title: Objetivos
+    title: Objetives
   alcance.md:
-    title: Alcance
+    title: Scope
   uso.md:
-    title: Como llenar la Guía
+    title: How to complete IG
+  transactions.md:
+    title: Transaction
   actores_CasosUso.md:
-    title: Actores y Casos de Uso
+    title: Uses cases and actors
   artifacts.html:
-    title: Artefactos
+    title: Artifacts
   mapeos.md:
-    title:  Mapeos
+    title:  Mappings
   terminologias.md:
-    title: Terminologias
+    title: Terminologies
   descargas.md:
-    title: Descargas
+    title: Downloads
   generalidades.md:
-    title: Generalidades
+    title: Generalities
   consideraciones.md:
-    title: Consideraciones
+    title: Considerations
   operaciones.md:
-    title: Operaciones
+    title: Operations
   seguridad.md:
-    title: Seguridad
+    title: Security
 
 menu:
-  Inicio: index.html
-  Objetivos: objetivos.html
-  Alcance: alcance.html
-  Uso: uso.html
-  Actores y Casos de Uso: actores_CasosUso.html
-  Artefactos: artifacts.html
-  Mapeos: mapeos.html
+  Home: index.html
+  Objetives: objetivos.html
+  Scope: alcance.html
+  Usage: uso.html
+  Transaction: transactions.html
+  Uses cases and actors: actores_CasosUso.html
+  Artifacts: artifacts.html
+  Mapping: mapeos.html
   #  Seguridad: seguridad.html
-  Terminologias: terminologias.html
-  Descargas: descargas.html
-  Generalidades: generalidades.html
-  Consideraciones: consideraciones.html
+  Terminologies: terminologias.html
+  Downloads: descargas.html
+  Generalities: generalidades.html
+  Considerations: consideraciones.html
   #Datos Generales:
   #  Generalidades: generalidades.html
   #  Actores y Casos de Uso: actores_CasosUso.html
