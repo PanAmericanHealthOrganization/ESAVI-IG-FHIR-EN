@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="CodeWhoManufacturerCS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-insensitive code system <code>https://paho.org/fhir/esavi/CodeSystem/CodeWhoManufacturerCS</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">INP<a name="CodeWhoManufacturerCS-INP"> </a></td><td>Inovio Pharmaceuticals</td></tr><tr><td style="white-space:nowrap">WIB<a name="CodeWhoManufacturerCS-WIB"> </a></td><td>Wuhan Institute of Biological Products (CNBG)</td></tr><tr><td style="white-space:nowrap">SII<a name="CodeWhoManufacturerCS-SII"> </a></td><td>Serum Institute of India</td></tr><tr><td style="white-space:nowrap">KBP<a name="CodeWhoManufacturerCS-KBP"> </a></td><td>Kentucky BioProcessing</td></tr><tr><td style="white-space:nowrap">BWB<a name="CodeWhoManufacturerCS-BWB"> </a></td><td>Beijing WANTAI Biological</td></tr><tr><td style="white-space:nowrap">CAB<a name="CodeWhoManufacturerCS-CAB"> </a></td><td>CanSino Biologicals</td></tr><tr><td style="white-space:nowrap">MOD<a name="CodeWhoManufacturerCS-MOD"> </a></td><td>Moderna</td></tr><tr><td style="white-space:nowrap">BMB<a name="CodeWhoManufacturerCS-BMB"> </a></td><td>Beijing Minhai Biotechnology</td></tr><tr><td style="white-space:nowrap">IIB<a name="CodeWhoManufacturerCS-IIB"> </a></td><td>Israel Institute for Biological Research</td></tr><tr><td style="white-space:nowrap">VID<a name="CodeWhoManufacturerCS-VID"> </a></td><td>VIDO-Intervac</td></tr><tr><td style="white-space:nowrap">BIB<a name="CodeWhoManufacturerCS-BIB"> </a></td><td>Beijing Bio-Institute Biological Products (CNBG)</td></tr><tr><td style="white-space:nowrap">GEN<a name="CodeWhoManufacturerCS-GEN"> </a></td><td>Genexine</td></tr><tr><td style="white-space:nowrap">CEC<a name="CodeWhoManufacturerCS-CEC"> </a></td><td>Cellid Co</td></tr><tr><td style="white-space:nowrap">JAP<a name="CodeWhoManufacturerCS-JAP"> </a></td><td>Janssen Pharmaceuticals</td></tr><tr><td style="white-space:nowrap">COV<a name="CodeWhoManufacturerCS-COV"> </a></td><td>Vaxxinity Inc</td></tr><tr><td style="white-space:nowrap">SIN<a name="CodeWhoManufacturerCS-SIN"> </a></td><td>Sinovac</td></tr><tr><td style="white-space:nowrap">SRC<a name="CodeWhoManufacturerCS-SRC"> </a></td><td>State Research Center of Virology &amp; Biotechnology</td></tr><tr><td style="white-space:nowrap">CHU<a name="CodeWhoManufacturerCS-CHU"> </a></td><td>Chumakov</td></tr><tr><td style="white-space:nowrap">ART<a name="CodeWhoManufacturerCS-ART"> </a></td><td>Arcturus Therapeutics</td></tr><tr><td style="white-space:nowrap">RIB<a name="CodeWhoManufacturerCS-RIB"> </a></td><td>Research Institute for Biological Safety Problems</td></tr><tr><td style="white-space:nowrap">EUB<a name="CodeWhoManufacturerCS-EUB"> </a></td><td>EUBiologics</td></tr><tr><td style="white-space:nowrap">IMB<a name="CodeWhoManufacturerCS-IMB"> </a></td><td>Insitute of Medical Biology</td></tr><tr><td style="white-space:nowrap">SGM<a name="CodeWhoManufacturerCS-SGM"> </a></td><td>Shenzhen GenoImmune Medical Institute</td></tr><tr><td style="white-space:nowrap">PFI<a name="CodeWhoManufacturerCS-PFI"> </a></td><td>Pfizer BioNTech</td></tr><tr><td style="white-space:nowrap">AIV<a name="CodeWhoManufacturerCS-AIV"> </a></td><td>Aivita Biomedical</td></tr><tr><td style="white-space:nowrap">NOV<a name="CodeWhoManufacturerCS-NOV"> </a></td><td>Novavax</td></tr><tr><td style="white-space:nowrap">GRI<a name="CodeWhoManufacturerCS-GRI"> </a></td><td>Gamaleya Research Institute</td></tr><tr><td style="white-space:nowrap">ANZ<a name="CodeWhoManufacturerCS-ANZ"> </a></td><td>Anhui Zhifei Longcom Biopharmaceutical</td></tr><tr><td style="white-space:nowrap">SPG<a name="CodeWhoManufacturerCS-SPG"> </a></td><td>Sanofi Pasteur - GSK</td></tr><tr><td style="white-space:nowrap">CGE<a name="CodeWhoManufacturerCS-CGE"> </a></td><td>Center for Genetic Engineering and Biotechnology</td></tr><tr><td style="white-space:nowrap">AKB<a name="CodeWhoManufacturerCS-AKB"> </a></td><td>Akston Biosciences</td></tr><tr><td style="white-space:nowrap">CUR<a name="CodeWhoManufacturerCS-CUR"> </a></td><td>Curevac</td></tr><tr><td style="white-space:nowrap">SHI<a name="CodeWhoManufacturerCS-SHI"> </a></td><td>Shionogi</td></tr><tr><td style="white-space:nowrap">MVB<a name="CodeWhoManufacturerCS-MVB"> </a></td><td>Medigen Vaccine Biologics</td></tr><tr><td style="white-space:nowrap">ANB<a name="CodeWhoManufacturerCS-ANB"> </a></td><td>AnGes Biopharmaceutical</td></tr><tr><td style="white-space:nowrap">ASZ<a name="CodeWhoManufacturerCS-ASZ"> </a></td><td>AstraZeneca</td></tr><tr><td style="white-space:nowrap">NPB<a name="CodeWhoManufacturerCS-NPB"> </a></td><td>Nanogen Pharmaceutical Biotechnology</td></tr><tr><td style="white-space:nowrap">BHB<a name="CodeWhoManufacturerCS-BHB"> </a></td><td>Bharat Biotech</td></tr><tr><td style="white-space:nowrap">IFV<a name="CodeWhoManufacturerCS-IFV"> </a></td><td>Instituto Finlay de Vacunas</td></tr><tr><td style="white-space:nowrap">VAL<a name="CodeWhoManufacturerCS-VAL"> </a></td><td>Valneva</td></tr><tr><td style="white-space:nowrap">BIE<a name="CodeWhoManufacturerCS-BIE"> </a></td><td>Biological E</td></tr><tr><td style="white-space:nowrap">MEI<a name="CodeWhoManufacturerCS-MEI"> </a></td><td>Medicago Inc</td></tr><tr><td style="white-space:nowrap">GOL<a name="CodeWhoManufacturerCS-GOL"> </a></td><td>GeneOne LifeScience</td></tr><tr><td style="white-space:nowrap">CLB<a name="CodeWhoManufacturerCS-CLB"> </a></td><td>Clover Biopharmaceuticals</td></tr><tr><td style="white-space:nowrap">ZYC<a name="CodeWhoManufacturerCS-ZYC"> </a></td><td>Zydus Cadila</td></tr><tr><td style="white-space:nowrap">SIU<a name="CodeWhoManufacturerCS-SIU"> </a></td><td>Sichuan University</td></tr><tr><td style="white-space:nowrap">RET<a name="CodeWhoManufacturerCS-RET"> </a></td><td>ReiThera</td></tr><tr><td style="white-space:nowrap">ERU<a name="CodeWhoManufacturerCS-ERU"> </a></td><td>Erciyes University</td></tr><tr><td style="white-space:nowrap">WBI<a name="CodeWhoManufacturerCS-WBI"> </a></td><td>Walvax Biotech</td></tr><tr><td style="white-space:nowrap">JUL<a name="CodeWhoManufacturerCS-JUL"> </a></td><td>Julphar</td></tr><tr><td style="white-space:nowrap">SHP<a name="CodeWhoManufacturerCS-SHP"> </a></td><td>Shifa Pharmed</td></tr><tr><td style="white-space:nowrap">VPL<a name="CodeWhoManufacturerCS-VPL"> </a></td><td>Vaxine Pty Ltd</td></tr><tr><td style="white-space:nowrap">RAZ<a name="CodeWhoManufacturerCS-RAZ"> </a></td><td>Razi Vaccine and Serum Research Institute</td></tr><tr><td style="white-space:nowrap">UNKNOWN<a name="CodeWhoManufacturerCS-UNKNOWN"> </a></td><td>Unknown</td></tr><tr><td style="white-space:nowrap">HIT<a name="CodeWhoManufacturerCS-HIT"> </a></td><td>Health Institutes of Turkey</td></tr><tr><td style="white-space:nowrap">NVSII<a name="CodeWhoManufacturerCS-NVSII"> </a></td><td>National Vaccine and Serum Institute, China</td></tr><tr><td style="white-space:nowrap">ODIR<a name="CodeWhoManufacturerCS-ODIR"> </a></td><td>Organization of Defensive Innovation and Research</td></tr><tr><td style="white-space:nowrap">PII<a name="CodeWhoManufacturerCS-PII"> </a></td><td>Pasteur Institute of Iran</td></tr><tr><td style="white-space:nowrap">BUMS<a name="CodeWhoManufacturerCS-BUMS"> </a></td><td>Baqiyatallah University of Medical Sciences</td></tr></table></div>
+  </text>
+  <url value="https://paho.org/fhir/esavi/CodeSystem/CodeWhoManufacturerCS"/>
+  <version value="0.1.45"/>
+  <name value="CodigoWhoFabricanteCS"/>
+  <title value="Vaccine Manufacturer"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2021-03-11T00:00:00-03:00"/>
+  <publisher value="ESAVI -"/>
+  <contact>
+    <name value="ESAVI -"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://covid-19pharmacovigilance.paho.org/resources/updates-on-aefi"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="rizzatodan@paho.org"/>
+    </telecom>
+  </contact>
+  <description value="WHO Vaccine Manufacturer Codes"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="59"/>
+  <concept>
+    <code value="INP"/>
+    <display value="Inovio Pharmaceuticals"/>
+  </concept>
+  <concept>
+    <code value="WIB"/>
+    <display value="Wuhan Institute of Biological Products (CNBG)"/>
+  </concept>
+  <concept>
+    <code value="SII"/>
+    <display value="Serum Institute of India"/>
+  </concept>
+  <concept>
+    <code value="KBP"/>
+    <display value="Kentucky BioProcessing"/>
+  </concept>
+  <concept>
+    <code value="BWB"/>
+    <display value="Beijing WANTAI Biological"/>
+  </concept>
+  <concept>
+    <code value="CAB"/>
+    <display value="CanSino Biologicals"/>
+  </concept>
+  <concept>
+    <code value="MOD"/>
+    <display value="Moderna"/>
+  </concept>
+  <concept>
+    <code value="BMB"/>
+    <display value="Beijing Minhai Biotechnology"/>
+  </concept>
+  <concept>
+    <code value="IIB"/>
+    <display value="Israel Institute for Biological Research"/>
+  </concept>
+  <concept>
+    <code value="VID"/>
+    <display value="VIDO-Intervac"/>
+  </concept>
+  <concept>
+    <code value="BIB"/>
+    <display value="Beijing Bio-Institute Biological Products (CNBG)"/>
+  </concept>
+  <concept>
+    <code value="GEN"/>
+    <display value="Genexine"/>
+  </concept>
+  <concept>
+    <code value="CEC"/>
+    <display value="Cellid Co"/>
+  </concept>
+  <concept>
+    <code value="JAP"/>
+    <display value="Janssen Pharmaceuticals"/>
+  </concept>
+  <concept>
+    <code value="COV"/>
+    <display value="Vaxxinity Inc"/>
+  </concept>
+  <concept>
+    <code value="SIN"/>
+    <display value="Sinovac"/>
+  </concept>
+  <concept>
+    <code value="SRC"/>
+    <display value="State Research Center of Virology &amp; Biotechnology"/>
+  </concept>
+  <concept>
+    <code value="CHU"/>
+    <display value="Chumakov"/>
+  </concept>
+  <concept>
+    <code value="ART"/>
+    <display value="Arcturus Therapeutics"/>
+  </concept>
+  <concept>
+    <code value="RIB"/>
+    <display value="Research Institute for Biological Safety Problems"/>
+  </concept>
+  <concept>
+    <code value="EUB"/>
+    <display value="EUBiologics"/>
+  </concept>
+  <concept>
+    <code value="IMB"/>
+    <display value="Insitute of Medical Biology"/>
+  </concept>
+  <concept>
+    <code value="SGM"/>
+    <display value="Shenzhen GenoImmune Medical Institute"/>
+  </concept>
+  <concept>
+    <code value="PFI"/>
+    <display value="Pfizer BioNTech"/>
+  </concept>
+  <concept>
+    <code value="AIV"/>
+    <display value="Aivita Biomedical"/>
+  </concept>
+  <concept>
+    <code value="NOV"/>
+    <display value="Novavax"/>
+  </concept>
+  <concept>
+    <code value="GRI"/>
+    <display value="Gamaleya Research Institute"/>
+  </concept>
+  <concept>
+    <code value="ANZ"/>
+    <display value="Anhui Zhifei Longcom Biopharmaceutical"/>
+  </concept>
+  <concept>
+    <code value="SPG"/>
+    <display value="Sanofi Pasteur - GSK"/>
+  </concept>
+  <concept>
+    <code value="CGE"/>
+    <display value="Center for Genetic Engineering and Biotechnology"/>
+  </concept>
+  <concept>
+    <code value="AKB"/>
+    <display value="Akston Biosciences"/>
+  </concept>
+  <concept>
+    <code value="CUR"/>
+    <display value="Curevac"/>
+  </concept>
+  <concept>
+    <code value="SHI"/>
+    <display value="Shionogi"/>
+  </concept>
+  <concept>
+    <code value="MVB"/>
+    <display value="Medigen Vaccine Biologics"/>
+  </concept>
+  <concept>
+    <code value="ANB"/>
+    <display value="AnGes Biopharmaceutical"/>
+  </concept>
+  <concept>
+    <code value="ASZ"/>
+    <display value="AstraZeneca"/>
+  </concept>
+  <concept>
+    <code value="NPB"/>
+    <display value="Nanogen Pharmaceutical Biotechnology"/>
+  </concept>
+  <concept>
+    <code value="BHB"/>
+    <display value="Bharat Biotech"/>
+  </concept>
+  <concept>
+    <code value="IFV"/>
+    <display value="Instituto Finlay de Vacunas"/>
+  </concept>
+  <concept>
+    <code value="VAL"/>
+    <display value="Valneva"/>
+  </concept>
+  <concept>
+    <code value="BIE"/>
+    <display value="Biological E"/>
+  </concept>
+  <concept>
+    <code value="MEI"/>
+    <display value="Medicago Inc"/>
+  </concept>
+  <concept>
+    <code value="GOL"/>
+    <display value="GeneOne LifeScience"/>
+  </concept>
+  <concept>
+    <code value="CLB"/>
+    <display value="Clover Biopharmaceuticals"/>
+  </concept>
+  <concept>
+    <code value="ZYC"/>
+    <display value="Zydus Cadila"/>
+  </concept>
+  <concept>
+    <code value="SIU"/>
+    <display value="Sichuan University"/>
+  </concept>
+  <concept>
+    <code value="RET"/>
+    <display value="ReiThera"/>
+  </concept>
+  <concept>
+    <code value="ERU"/>
+    <display value="Erciyes University"/>
+  </concept>
+  <concept>
+    <code value="WBI"/>
+    <display value="Walvax Biotech"/>
+  </concept>
+  <concept>
+    <code value="JUL"/>
+    <display value="Julphar"/>
+  </concept>
+  <concept>
+    <code value="SHP"/>
+    <display value="Shifa Pharmed"/>
+  </concept>
+  <concept>
+    <code value="VPL"/>
+    <display value="Vaxine Pty Ltd"/>
+  </concept>
+  <concept>
+    <code value="RAZ"/>
+    <display value="Razi Vaccine and Serum Research Institute"/>
+  </concept>
+  <concept>
+    <code value="UNKNOWN"/>
+    <display value="Unknown"/>
+  </concept>
+  <concept>
+    <code value="HIT"/>
+    <display value="Health Institutes of Turkey"/>
+  </concept>
+  <concept>
+    <code value="NVSII"/>
+    <display value="National Vaccine and Serum Institute, China"/>
+  </concept>
+  <concept>
+    <code value="ODIR"/>
+    <display value="Organization of Defensive Innovation and Research"/>
+  </concept>
+  <concept>
+    <code value="PII"/>
+    <display value="Pasteur Institute of Iran"/>
+  </concept>
+  <concept>
+    <code value="BUMS"/>
+    <display value="Baqiyatallah University of Medical Sciences"/>
+  </concept>
+</CodeSystem>

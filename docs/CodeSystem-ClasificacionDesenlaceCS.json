@@ -1,0 +1,61 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ClasificacionDesenlaceCS",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-insensitive code system <code>https://paho.org/fhir/esavi/CodeSystem/ClasificacionDesenlaceCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"ClasificacionDesenlaceCS-1\"> </a></td><td>Completely Recovered</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"ClasificacionDesenlaceCS-2\"> </a></td><td>In recovery</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"ClasificacionDesenlaceCS-3\"> </a></td><td>Not recovered</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"ClasificacionDesenlaceCS-4\"> </a></td><td>Recovered with consequences</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"ClasificacionDesenlaceCS-5\"> </a></td><td>Death</td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"ClasificacionDesenlaceCS-0\"> </a></td><td>Unknown</td></tr></table></div>"
+  },
+  "url" : "https://paho.org/fhir/esavi/CodeSystem/ClasificacionDesenlaceCS",
+  "version" : "0.1.45",
+  "name" : "ClasificacionDesenlaceCS",
+  "title" : "Outcomes After ESAVI",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2021-03-11T00:00:00-03:00",
+  "publisher" : "ESAVI -",
+  "contact" : [{
+    "name" : "ESAVI -",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://covid-19pharmacovigilance.paho.org/resources/updates-on-aefi"
+    },
+    {
+      "system" : "email",
+      "value" : "rizzatodan@paho.org"
+    }]
+  }],
+  "description" : "Classification of Outcome After Suffering ESAVI",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "caseSensitive" : false,
+  "content" : "complete",
+  "count" : 6,
+  "concept" : [{
+    "code" : "1",
+    "display" : "Completely Recovered"
+  },
+  {
+    "code" : "2",
+    "display" : "In recovery"
+  },
+  {
+    "code" : "3",
+    "display" : "Not recovered"
+  },
+  {
+    "code" : "4",
+    "display" : "Recovered with consequences"
+  },
+  {
+    "code" : "5",
+    "display" : "Death"
+  },
+  {
+    "code" : "0",
+    "display" : "Unknown"
+  }]
+}
